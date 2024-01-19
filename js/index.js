@@ -1,29 +1,44 @@
-"use strict";
-alert("Я JavaScript!")
-let admin_1;
-let name_1;
+/* Задание на урок:
 
-name_1 = "Джон";
-admin_1 = name_1;
-alert(admin_1);
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
 
-console.log('new function of git');
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
 
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
 
+Проверить, чтобы все работало без ошибок в консоли */
 
+'use strict';
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", ""),
 
+      userAnswerTheLatestFilm1 = prompt("Один из последних просмотренных фильмов?", ""),
+      userAnswerTheRateOfLatestFilm1 = +prompt("На сколько оцените его?", ""),
 
+      userAnswerTheLatestFilm2 = prompt("Один из последних просмотренных фильмов?", ""),
+      userAnswerTheRateOfLatestFilm2 = +prompt("На сколько оцените его?", ""),
 
+      personalMovieDB = {
+        count: numberOfFilms,
+        movies: {},
+        actors: {},
+        genres: [],
+        privat: false
+      };
 
+personalMovieDB.movies[userAnswerTheLatestFilm1] = userAnswerTheRateOfLatestFilm1;
+personalMovieDB.movies[userAnswerTheLatestFilm2] = userAnswerTheRateOfLatestFilm2;
+console.log(personalMovieDB);
 
-
-
-
-// const obj ={
-//     name: 'Mike',
-//     age: 25
-// };
-// const newPoint = 'placeOfWork';
-// obj.newPoint = "Front-end";
-// console.log(5);
-// console.log(obj.newPoint);
