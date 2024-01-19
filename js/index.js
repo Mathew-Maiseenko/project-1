@@ -7,6 +7,8 @@ name_1 = "Джон";
 admin_1 = name_1;
 alert(admin_1);
 
+console.log('new function of git');
+
 
 
 
